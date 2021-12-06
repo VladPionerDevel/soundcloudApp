@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackFavoriteCell" rowHeight="66" id="Qj4-vj-R0n" customClass="TrackFavoriteCell" customModule="soundcloudApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qj4-vj-R0n" id="S4Y-eB-SpI">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MSZ-wg-ePS">
+                        <rect key="frame" x="10" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="epn-8R-MHH"/>
+                            <constraint firstAttribute="height" constant="50" id="f1S-uy-O0h"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SongName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBc-4D-fzK">
+                        <rect key="frame" x="70" y="9" width="91" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SongAuthor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxm-mK-bBA">
+                        <rect key="frame" x="70" y="34" width="75" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOn-0O-5Ev">
+                        <rect key="frame" x="260" y="11.5" width="40" height="37.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="EdV-mb-B6F"/>
+                            <constraint firstAttribute="height" constant="40" id="Hbt-wy-1xX"/>
+                        </constraints>
+                        <color key="tintColor" red="1" green="0.33333333329999998" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <state key="normal" backgroundImage="heart.fill" catalog="system"/>
+                        <connections>
+                            <action selector="removeFavoriteTapped:" destination="Qj4-vj-R0n" eventType="touchUpInside" id="jSd-fS-qaP"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MBc-4D-fzK" firstAttribute="top" secondItem="S4Y-eB-SpI" secondAttribute="top" constant="9" id="12h-2m-GD4"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MSZ-wg-ePS" secondAttribute="bottom" constant="11" id="3Pu-X2-YaD"/>
+                    <constraint firstAttribute="trailing" secondItem="OOn-0O-5Ev" secondAttribute="trailing" constant="20" id="49t-wH-TgN"/>
+                    <constraint firstItem="OOn-0O-5Ev" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MBc-4D-fzK" secondAttribute="trailing" constant="10" id="6D1-wS-7DY"/>
+                    <constraint firstItem="OOn-0O-5Ev" firstAttribute="top" secondItem="S4Y-eB-SpI" secondAttribute="top" constant="10" id="Mkx-Hl-QzF"/>
+                    <constraint firstItem="qxm-mK-bBA" firstAttribute="top" secondItem="MBc-4D-fzK" secondAttribute="bottom" constant="4" id="YDZ-yj-cac"/>
+                    <constraint firstItem="MBc-4D-fzK" firstAttribute="leading" secondItem="MSZ-wg-ePS" secondAttribute="trailing" constant="10" id="bhS-og-o2C"/>
+                    <constraint firstItem="qxm-mK-bBA" firstAttribute="leading" secondItem="MSZ-wg-ePS" secondAttribute="trailing" constant="10" id="bnH-1t-taG"/>
+                    <constraint firstItem="OOn-0O-5Ev" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qxm-mK-bBA" secondAttribute="trailing" constant="10" id="dNI-cO-gVO"/>
+                    <constraint firstItem="MSZ-wg-ePS" firstAttribute="top" secondItem="S4Y-eB-SpI" secondAttribute="top" constant="5" id="fiy-dG-7Oh"/>
+                    <constraint firstItem="MSZ-wg-ePS" firstAttribute="leading" secondItem="S4Y-eB-SpI" secondAttribute="leading" constant="10" id="vYb-H9-mIv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Wnb-aw-0H6"/>
+            <connections>
+                <outlet property="coverImageView" destination="MSZ-wg-ePS" id="Wy8-Sf-MdP"/>
+                <outlet property="faviriteButton" destination="OOn-0O-5Ev" id="hyS-d7-k1V"/>
+                <outlet property="songAuthorLabel" destination="qxm-mK-bBA" id="Xie-0H-xay"/>
+                <outlet property="songNameLabel" destination="MBc-4D-fzK" id="Rjg-hU-Evm"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="66.964285714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+    </resources>
+</document>
